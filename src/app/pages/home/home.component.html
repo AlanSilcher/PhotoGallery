@@ -1,2 +1,7 @@
-<p>Esto es Home</p>
+<h2>Home</h2>
 
+<div *ngFor="let image of images">
+  <img [src]="image" alt="Image">
+</div>
+
+<button *ngIf="canLoadMoreImages()" (click)="loadMoreImages()">Cargar más</button>
