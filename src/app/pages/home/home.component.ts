@@ -9,7 +9,6 @@ import { HttpClient } from '@angular/common/http';
 export class HomeComponent {
   images: string[] = [];
   imagesPerPage = 15;
-  currentPage = 1;
 
   constructor(private http: HttpClient) { }
 
@@ -18,9 +17,7 @@ export class HomeComponent {
   }
 
   fetchImages() {
-    const apiUrl = `https://api.unsplash.com/photos?page=${this.currentPage}&per_page=${this.imagesPerPage}&client_id=ScFHf4ynFZAKr_VPfBN0srn8z05qCxsauBzLDvff9hI`;
-
-    console.log('Fetching images');
+    const apiUrl = `https://api.unsplash.com/photos/random?count=${this.imagesPerPage}&client_id=ScFHf4ynFZAKr_VPfBN0srn8z05qCxsauBzLDvff9hI`;
 
     this.http.get<Object[]>(apiUrl).subscribe((data: Object[]) => {
       const newImages = data.map((item: any) => item.urls.small);
@@ -29,11 +26,11 @@ export class HomeComponent {
   }
 
   loadMoreImages() {
-    this.currentPage++;
     this.fetchImages();
   }
 
   canLoadMoreImages(): boolean {
     return this.images.length % this.imagesPerPage === 0;
+   
   }
 }
