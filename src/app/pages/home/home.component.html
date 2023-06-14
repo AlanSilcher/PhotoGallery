@@ -1,7 +1,7 @@
 <h2>Home</h2>
 
 <div *ngFor="let image of images">
-  <img [src]="image" alt="Image">
+  <img [src]="image.url" [alt]="image.id" (click)="redirectToDetail(image.id)">
 </div>
 
 <button *ngIf="canLoadMoreImages()" (click)="loadMoreImages()">Cargar más</button>

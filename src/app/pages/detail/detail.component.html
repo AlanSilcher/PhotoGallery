@@ -1,1 +1,7 @@
 <p>Esto es Detail</p>
+
+<div *ngIf="image">
+  <img [src]="image.urls.regular" [alt]="image.alt_description">
+  <p><strong>Autor:</strong> {{ image.user.name }}</p>
+  <p><strong>Fecha de creación:</strong> {{ image.created_at | date }}</p>
+</div>
