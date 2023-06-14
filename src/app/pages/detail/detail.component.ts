@@ -7,14 +7,13 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './detail.component.html',
   styleUrls: ['./detail.component.css']
 })
-export class DetailComponent implements OnInit {
+export class DetailComponent {
   image: any;
 
   constructor(private http: HttpClient, private route: ActivatedRoute) { }
 
  ngOnInit() {
     const imageId = this.route.snapshot.paramMap.get('id');
-    console.log('Image ID:', imageId);
     
     if (imageId !== null) {
       this.fetchImageDetails(imageId);
@@ -26,7 +25,6 @@ export class DetailComponent implements OnInit {
     const apiUrl = `https://api.unsplash.com/photos/${imageId}?client_id=ScFHf4ynFZAKr_VPfBN0srn8z05qCxsauBzLDvff9hI`;
 
     this.http.get<any>(apiUrl).subscribe((data: any) => {
-      console.log("esto es data", data)
       this.image = data;
     });
   }
