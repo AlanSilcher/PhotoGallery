@@ -8,11 +8,12 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { DetailComponent } from './pages/detail/detail.component';
 import { SearchComponent } from './pages/search/search.component';
-import { landingComponent } from './pages/landing/landing.component';
+import { LandingComponent } from './pages/landing/landing.component';
+import { FormsModule } from '@angular/forms';
 
 
 const routes: Routes = [
-  { path: '', component: landingComponent },
+  { path: '', component: LandingComponent },
   { path: 'home', component: HomeComponent },
   { path: 'search', component: SearchComponent },
   { path: 'detail/:id', component: DetailComponent },
@@ -25,11 +26,12 @@ const routes: Routes = [
     HomeComponent,
     DetailComponent,
     SearchComponent,
-    landingComponent
+    LandingComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],

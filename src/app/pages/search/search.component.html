@@ -1,1 +1,12 @@
 <p>Esto es Search</p>
+
+<form (ngSubmit)="searchImagesByAuthor()">
+    <input type="text" [(ngModel)]="authorQuery" name="authorQuery" placeholder="Buscar por autor">
+    <button type="submit">Buscar</button>
+  </form>
+  
+  
+  <!-- <div *ngFor="let image of searchResults">
+    <img [src]="image.urls.regular" [alt]="image.alt_description">
+  </div> -->
+  
