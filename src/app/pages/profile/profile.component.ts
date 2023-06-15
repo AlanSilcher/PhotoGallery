@@ -24,12 +24,13 @@ export class ProfileComponent implements OnInit {
     let images: any[] = [];
 
     const fetchPage = () => {
-      const apiUrl = `https://api.unsplash.com/users/${username}/photos?client_id=ScFHf4ynFZAKr_VPfBN0srn8z05qCxsauBzLDvff9hI&page=${page}&per_page=${perPage}`;
+      const apiUrl = `https://api.unsplash.com/users/${username}/photos?client_id=Y-qrJ1ErRuz4CigR6nD19M4ad76OLJyaKm-TAT7xl18&page=${page}&per_page=${perPage}`;
 
       this.http.get<any[]>(apiUrl).subscribe((data: any[]) => {
         if (data.length > 0) {
           images = [...images, ...data];
           page++;
+          console.log(data)
           fetchPage(); 
         } else {
           this.userImages = images;

@@ -18,7 +18,7 @@ export class HomeComponent {
   }
 
   fetchImages() {
-    const apiUrl = `https://api.unsplash.com/photos/random?count=${this.imagesPerPage}&client_id=ScFHf4ynFZAKr_VPfBN0srn8z05qCxsauBzLDvff9hI`;
+    const apiUrl = `https://api.unsplash.com/photos/random?count=${this.imagesPerPage}&client_id=Y-qrJ1ErRuz4CigR6nD19M4ad76OLJyaKm-TAT7xl18`;
 
     this.http.get<Object[]>(apiUrl).subscribe((data: Object[]) => {
       const newImages = data.map((item: any) => ({ url: item.urls.small, id: item.id }));

@@ -22,7 +22,7 @@ export class DetailComponent {
   
   
   fetchImageDetails(imageId: string) {
-    const apiUrl = `https://api.unsplash.com/photos/${imageId}?client_id=ScFHf4ynFZAKr_VPfBN0srn8z05qCxsauBzLDvff9hI`;
+    const apiUrl = `https://api.unsplash.com/photos/${imageId}?client_id=Y-qrJ1ErRuz4CigR6nD19M4ad76OLJyaKm-TAT7xl18`;
 
     this.http.get<any>(apiUrl).subscribe((data: any) => {
       console.log(data);
