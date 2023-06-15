@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  images: { url: string, id: string }[] = [];
+  columns: { url: string, id: string }[][] = [];
   imagesPerPage = 15;
 
   constructor(private http: HttpClient, private router: Router) { }
@@ -22,8 +22,22 @@ export class HomeComponent {
 
     this.http.get<Object[]>(apiUrl).subscribe((data: Object[]) => {
       const newImages = data.map((item: any) => ({ url: item.urls.small, id: item.id }));
-      this.images = this.images.concat(newImages);
+      this.arrangeImagesInColumns(newImages);
     });
+  }
+
+  arrangeImagesInColumns(images: { url: string, id: string }[]) {
+    const numColumns = 3;
+    const imagesPerColumn = Math.ceil(images.length / numColumns);
+
+    this.columns = [];
+
+    for (let i = 0; i < numColumns; i++) {
+      const startIndex = i * imagesPerColumn;
+      const endIndex = startIndex + imagesPerColumn;
+      const columnImages = images.slice(startIndex, endIndex);
+      this.columns.push(columnImages);
+    }
   }
 
   loadMoreImages() {
@@ -31,7 +45,7 @@ export class HomeComponent {
   }
 
   canLoadMoreImages(): boolean {
-    return this.images.length % this.imagesPerPage === 0;
+    return this.columns.length === 0 || this.columns[0].length === this.imagesPerPage;
   }
 
   redirectToDetail(id: string) {

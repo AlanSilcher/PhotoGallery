@@ -1,7 +1,11 @@
-<h2>Home</h2>
-
-<div *ngFor="let image of images">
-  <img [src]="image.url" [alt]="image.id" (click)="redirectToDetail(image.id)">
+<div class="gallery">
+  <div class="column" *ngFor="let column of columns">
+    <div class="image-container" *ngFor="let image of column">
+      <img [src]="image.url" [alt]="image.id" (click)="redirectToDetail(image.id)">
+    </div>
+  </div>
 </div>
 
-<button *ngIf="canLoadMoreImages()" (click)="loadMoreImages()">Cargar más</button>
+<div class="load-more" *ngIf="canLoadMoreImages()">
+  <button (click)="loadMoreImages()">Cargar más</button>
+</div>
