@@ -1,6 +1,19 @@
-<div *ngIf="image">
-  <img [src]="image.urls.regular" [alt]="image.alt_description">
-  <p><strong>Autor:</strong> <a [routerLink]="['/user', image.user.username]">{{ image.user.name }}</a></p>
-  <p><strong>Instagram:</strong> <a [href]="'https://www.instagram.com/' + image.user.instagram_username" target="_blank">{{ image.user.instagram_username }}</a></p>
-  <p><strong>Fecha de creación:</strong> {{ image.created_at | date }}</p>
+<div class="page-container">
+  <div *ngIf="image" class="card">
+    <img [src]="image.urls.regular" [alt]="image.alt_description" class="card-img-top">
+    <div class="card-body">
+      <p class="card-text"><strong>Fecha de creación:</strong> {{ image.created_at | date }}</p>
+      <p class="card-text">
+        <strong>Autor: </strong>
+        <a [routerLink]="['/user', image.user.username]" class="author-link">{{ image.user.name }}</a>
+      </p>
+      <p class="card-text">
+        <strong> </strong>
+        <a [href]="'https://www.instagram.com/' + image.user.instagram_username" target="_blank" class="instagram-link">
+          <i class="fab fa-instagram fa-lg"></i>
+        </a>
+      </p>
+     
+    </div>
+  </div>
 </div>
