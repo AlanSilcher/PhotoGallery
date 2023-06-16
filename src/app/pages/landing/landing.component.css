@@ -1,0 +1,4 @@
+.container {
+    max-width: 600px; /* Ajusta el ancho máximo según tus necesidades */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+  }

@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http'; 
 import { FormsModule } from '@angular/forms';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -35,6 +36,7 @@ const routes: Routes = [
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    SlickCarouselModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],
