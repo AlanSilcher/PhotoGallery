@@ -1,11 +1,23 @@
-<div class="gallery">
-  <div class="column" *ngFor="let column of columns">
-    <div class="image-container" *ngFor="let image of column">
-      <img [src]="image.url" [alt]="image.id" (click)="redirectToDetail(image.id)">
+<div class="gallery-wrapper">
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="gallery">
+        <div class="column" *ngFor="let column of columns">
+          <div class="image-container" *ngFor="let image of column">
+            <img [src]="image.url" [alt]="image.id" (click)="redirectToDetail(image.id)" class="image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row justify-content-center mt-4">
+    <div class="col-auto">
+      <div class="load-more" *ngIf="canLoadMoreImages()">
+        <button (click)="loadMoreImages()">Cargar más</button>
+      </div>
     </div>
   </div>
 </div>
-
-<div class="load-more" *ngIf="canLoadMoreImages()">
-  <button (click)="loadMoreImages()">Cargar más</button>
 </div>
