@@ -1,8 +1,18 @@
-<p>Esto es Profile</p>
-
-<div *ngIf="userImages">
-    <h2>{{ userImages[0]?.user?.name }}</h2>
-  <div *ngFor="let image of userImages">
-    <img [src]="image.urls.regular" [alt]="image.alt_description">
+<div style="background-color: #0D0D0D; min-height: 100vh; display: flex; align-items: center; justify-content: center;">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12">
+        <h2 class="text-center" style="font-family: 'Times New Roman', serif;  color: #F2F2F2; font-size: 300%;">{{ userImages[0]?.user?.name }}</h2>
+      </div>
+      <div class="col-12">
+        <div class="d-flex flex-wrap justify-content-center">
+          <div *ngFor="let image of userImages" class="m-2">
+            <a [routerLink]="'/detail/' + image.id">
+              <img [src]="image.urls.regular" [alt]="image.alt_description" class="img-fluid">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
