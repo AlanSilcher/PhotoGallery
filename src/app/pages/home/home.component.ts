@@ -62,6 +62,6 @@ export class HomeComponent {
   }
 
   redirectToDetail(id: string) {
-    this.router.navigate(['/detail', id]);
+    this.router.navigate(['/detalle', id]);
   }
 }

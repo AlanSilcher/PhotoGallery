@@ -7,7 +7,7 @@
       <div class="col-12">
         <div class="d-flex flex-wrap justify-content-center">
           <div *ngFor="let image of userImages" class="m-2">
-            <a [routerLink]="'/detail/' + image.id">
+            <a [routerLink]="'/detalle/' + image.id">
               <img [src]="image.urls.regular" [alt]="image.alt_description" class="img-fluid">
             </a>
           </div>

@@ -14,9 +14,9 @@ import { ProfileComponent } from './pages/profile/profile.component';
 
 const routes: Routes = [
   { path: '', component: LandingComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'detail/:id', component: DetailComponent },
-  { path: 'user/:username', component: ProfileComponent }
+  { path: 'galeria', component: HomeComponent },
+  { path: 'detalle/:id', component: DetailComponent },
+  { path: 'usuario/:username', component: ProfileComponent }
 ];
 
 @NgModule({
