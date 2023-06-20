@@ -4,6 +4,5 @@
     <h2>{{ userImages[0]?.user?.name }}</h2>
   <div *ngFor="let image of userImages">
     <img [src]="image.urls.regular" [alt]="image.alt_description">
-    <p><strong>Fecha de creación:</strong> {{ image.created_at | date }}</p>
   </div>
 </div>
