@@ -46,3 +46,21 @@
 .instagram-link-external:hover {
   text-decoration: underline;
 }
+
+.instagram-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto; 
+}
+
+.instagram-icon {
+  font-size: 250%;
+  transition: color 0.3s;
+  color: #833AB4;
+}
+
+.instagram-link-external:hover .instagram-icon {
+  color: #E1306C;
+}

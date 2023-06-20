@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { DetailComponent } from './pages/detail/detail.component';
-import { SearchComponent } from './pages/search/search.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 
@@ -16,7 +15,6 @@ import { ProfileComponent } from './pages/profile/profile.component';
 const routes: Routes = [
   { path: '', component: LandingComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'search', component: SearchComponent },
   { path: 'detail/:id', component: DetailComponent },
   { path: 'user/:username', component: ProfileComponent }
 ];
@@ -27,7 +25,6 @@ const routes: Routes = [
     NavbarComponent,
     HomeComponent,
     DetailComponent,
-    SearchComponent,
     LandingComponent,
     ProfileComponent
   ],

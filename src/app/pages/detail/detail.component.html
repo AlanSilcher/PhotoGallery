@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
 <div class="page-container">
   <div class="card">
     <img [src]="image.urls.regular" [alt]="image.alt_description" class="card-img">
@@ -5,13 +7,11 @@
       <h5 class="card-title">{{ image.title }}</h5>
       <p class="card-text text-center"><a [routerLink]="['/user', image.user.username]" class="instagram-link">{{ image.user.name }}</a></p>
       <p class="card-text text-center"><strong>Fecha de creación:</strong> {{ image.created_at | date }}</p>
-      <p class="card-text text-center">
-        <strong>Instagram: </strong>
-        <ng-container *ngIf="image.user.instagram_username">
-          <a [href]="'https://www.instagram.com/' + image.user.instagram_username" target="_blank" class="instagram-link-external">{{ image.user.instagram_username }}</a>
-        </ng-container>
-        <ng-container *ngIf="!image.user.instagram_username">No tiene Instagram</ng-container>
-      </p>
+      <a [href]="'https://www.instagram.com/' + image.user.instagram_username" target="_blank" class="instagram-link-external">
+        <div class="instagram-icon-container">
+          <i class="fab fa-instagram instagram-icon"></i>
+        </div>
+      </a>
     </div>
   </div>
 </div>
