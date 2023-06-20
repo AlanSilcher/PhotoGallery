@@ -1,0 +1,41 @@
+.page-container {
+  background-color: #0D0D0D;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carousel-half {
+  width: 50%;
+  margin: 2% auto;
+}
+
+.carousel-half .carousel-inner {
+  height: 50%;
+}
+
+.carousel-half .carousel-item {
+  width: 100%;
+}
+
+.carousel-half .carousel-item img {
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.carousel-half .carousel-control-prev,
+.carousel-half .carousel-control-next {
+  width: 5%;
+}
+
+.texto-arriba {
+  text-align: center;
+  margin-top: 20px;
+  color: #F2F2F2;
+  font-family: "Roboto", sans-serif;
+  font-size: 450%; 
+}
+
+ 
+

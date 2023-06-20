@@ -10,6 +10,7 @@ import { HttpClient } from '@angular/common/http';
 export class ProfileComponent implements OnInit {
   username: string = '';
   userImages: any[] = [];
+  isLoading: boolean = true; // Variable para controlar la carga
 
   constructor(private http: HttpClient, private route: ActivatedRoute) {}
 
@@ -19,8 +20,8 @@ export class ProfileComponent implements OnInit {
   }
 
   fetchUserImages(username: string) {
-    const perPage = 30; 
-    let page = 1; 
+    const perPage = 30;
+    let page = 1;
     let images: any[] = [];
 
     const fetchPage = () => {
@@ -30,10 +31,10 @@ export class ProfileComponent implements OnInit {
         if (data.length > 0) {
           images = [...images, ...data];
           page++;
-          console.log(data)
-          fetchPage(); 
+          fetchPage();
         } else {
           this.userImages = images;
+          this.isLoading = false; 
         }
       });
     };

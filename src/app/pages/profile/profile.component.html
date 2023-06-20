@@ -6,6 +6,9 @@
       </div>
       <div class="col-12">
         <div class="d-flex flex-wrap justify-content-center">
+          <div *ngIf="isLoading" class="text-center">
+            <div class="spinner-border text-light" role="status"></div>
+          </div>
           <div *ngFor="let image of userImages" class="m-2">
             <a [routerLink]="'/detalle/' + image.id">
               <img [src]="image.urls.regular" [alt]="image.alt_description" class="img-fluid">
