@@ -1,19 +1,17 @@
 <div class="page-container">
-  <div *ngIf="image" class="card">
-    <img [src]="image.urls.regular" [alt]="image.alt_description" class="card-img-top">
+  <div class="card">
+    <img [src]="image.urls.regular" [alt]="image.alt_description" class="card-img">
     <div class="card-body">
-      <p class="card-text"><strong>Fecha de creación:</strong> {{ image.created_at | date }}</p>
-      <p class="card-text">
-        <strong>Autor: </strong>
-        <a [routerLink]="['/user', image.user.username]" class="author-link">{{ image.user.name }}</a>
+      <h5 class="card-title">{{ image.title }}</h5>
+      <p class="card-text text-center"><a [routerLink]="['/user', image.user.username]" class="instagram-link">{{ image.user.name }}</a></p>
+      <p class="card-text text-center"><strong>Fecha de creación:</strong> {{ image.created_at | date }}</p>
+      <p class="card-text text-center">
+        <strong>Instagram: </strong>
+        <ng-container *ngIf="image.user.instagram_username">
+          <a [href]="'https://www.instagram.com/' + image.user.instagram_username" target="_blank" class="instagram-link-external">{{ image.user.instagram_username }}</a>
+        </ng-container>
+        <ng-container *ngIf="!image.user.instagram_username">No tiene Instagram</ng-container>
       </p>
-      <p class="card-text">
-        <strong> </strong>
-        <a [href]="'https://www.instagram.com/' + image.user.instagram_username" target="_blank" class="instagram-link">
-          <i class="fab fa-instagram fa-lg"></i>
-        </a>
-      </p>
-     
     </div>
   </div>
 </div>

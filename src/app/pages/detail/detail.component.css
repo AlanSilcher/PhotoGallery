@@ -1,51 +1,48 @@
 .page-container {
-    background-color: #000000;
-    padding: 20px;
-  }
-  
-  .card {
-    max-width: 500px;
-    margin: 0 auto;
-    background-color: #F2F2F2;
-    border: none;
-  }
-  
-  .card-img-top {
-    width: 100%;
-    height: auto;
-  }
-  
-  .card-body {
-    text-align: center;
-  }
-  
-  .card-title {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .card-text {
-    font-size: 18px;
-    margin-bottom: 5px;
-  }
-  
-  .author-link {
-    color: #0D0D0D;
-    font-size: 18px;
-    text-decoration: none;
-  }
-  
-  .instagram-link {
-    color: #E1306C;
-    font-size: 24px;
-  }
-  
-  a {
-    color: #0D0D0D;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    color: #833AB4;
-  }
-  
+  background-color: #0D0D0D;
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 600px;
+  margin: 2% auto;
+  background-color: white;
+  color: #0D0D0D;
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.instagram-link {
+  color: #C13584;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.instagram-link:hover {
+  text-decoration: underline;
+}
+
+.instagram-link-external {
+  color: #C13584;
+  text-decoration: none;
+}
+
+.instagram-link-external:hover {
+  text-decoration: underline;
+}
