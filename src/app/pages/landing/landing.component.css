@@ -15,7 +15,7 @@
 }
 
 .carousel-half .carousel-inner {
-  height: 70vh;
+  height: 100%;
 }
 
 .carousel-half .carousel-item {
@@ -41,15 +41,16 @@
 }
 
 @media (max-width: 576px) {
-  .carousel-half .carousel-inner {
-    height: 100vh;
-  }
-  .texto-arriba {
-    font-size: 150%;
-  }
   .page-container {
     padding-top: 0 !important; 
     padding-bottom: 0 !important; 
     background-color: aquamarine !important;
   }
+  .carousel-half .carousel-inner {
+    height: 100% !important;
+  }
+  .texto-arriba {
+    font-size: 250% !important;
+  }
 }
+
