@@ -1,10 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
+  currentRoute: string;
 
+  constructor(private router: Router) {
+    this.currentRoute = '';
+  }
+
+  ngOnInit() {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        console.log("esto es event", event)
+        this.currentRoute = event.url;
+        console.log("esto es route", this.currentRoute)
+      }
+    });
+  }
 }
