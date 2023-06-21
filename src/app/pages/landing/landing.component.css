@@ -42,14 +42,20 @@
 
 @media (max-width: 576px) {
   .page-container {
-    padding-top: 0 !important; 
-    padding-bottom: 0 !important; 
+    padding-top: 0; 
+    padding-bottom: 0; 
   }
-  .carousel-half .carousel-item {
-    width: 200% !important;
+  
+  .carousel-half {
+    width: 100%;
+    margin: 0 auto;
   }
+
+  .carousel-half .carousel-inner {
+    height: auto;
+  }
+
   .texto-arriba {
-    font-size: 250% !important;
+    font-size: 250% ;
   }
 }
-
