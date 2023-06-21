@@ -9,21 +9,13 @@
   padding-bottom: 20px;
 }
 
-@media (min-width: 576px) {
- 
-  .page-container {
-    padding-top: 0; 
-    padding-bottom: 0; 
-  }
-}
-
 .carousel-half {
   width: 50%;
   margin: 2% auto;
 }
 
 .carousel-half .carousel-inner {
-  height: 50%;
+  height:  70vh;
 }
 
 .carousel-half .carousel-item {
@@ -48,5 +40,19 @@
   font-size: 450%; 
 }
 
+@media (min-width: 576px) {
+ 
+  .page-container {
+    padding-top: 0; 
+    padding-bottom: 0; 
+  }
+  .carousel-half .carousel-inner {
+    height: 50vh;
+  }
+
+  .texto-arriba {
+    font-size: 250%;
+  }
+}
  
 
