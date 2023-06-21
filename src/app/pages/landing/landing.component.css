@@ -48,7 +48,7 @@
   
   .carousel-half {
     width: 100%;
-    margin: 1%;
+    margin: 0px auto;
   }
 
   .carousel-half .carousel-inner {
