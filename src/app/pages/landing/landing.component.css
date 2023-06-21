@@ -48,7 +48,7 @@
   
   .carousel-half {
     width: 100%;
-    margin: 0px auto;
+    margin-bottom: 25px;
   }
 
   .carousel-half .carousel-inner {
@@ -56,7 +56,7 @@
   }
 
   .texto-arriba {
-    margin-top: 40px;
+    margin-top: 80px;
     font-size: 250% ;
     margin-bottom: 0px;
   }
