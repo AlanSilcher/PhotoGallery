@@ -25,7 +25,6 @@ export class DetailComponent {
     const apiUrl = `https://api.unsplash.com/photos/${imageId}?client_id=Y-qrJ1ErRuz4CigR6nD19M4ad76OLJyaKm-TAT7xl18`;
 
     this.http.get<any>(apiUrl).subscribe((data: any) => {
-      console.log(data);
       this.image = data;
     });
   }
