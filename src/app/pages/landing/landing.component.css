@@ -1,14 +1,14 @@
 @media (min-width: 576px) {
   .page-container {
-    padding-top: 0; 
-    padding-bottom: 0;
-    background-color: aqua; 
+    padding-top: 0 !important; 
+    padding-bottom: 0 !important; 
+    background-color: aquamarine !important;
   }
   .carousel-half .carousel-inner {
-    height: 100vh;
+    height: 100vh !important;
   }
   .texto-arriba {
-    font-size: 150%;
+    font-size: 150% !important;
   }
 }
 
