@@ -40,16 +40,16 @@
   font-size: 450%; 
 }
 
-@media (min-width: 576px) {
+@media (max-width: 576px) {
+  .carousel-half .carousel-inner {
+    height: 100vh;
+  }
+  .texto-arriba {
+    font-size: 150%;
+  }
   .page-container {
     padding-top: 0 !important; 
     padding-bottom: 0 !important; 
     background-color: aquamarine !important;
-  }
-  .carousel-half .carousel-inner {
-    height: 100vh !important;
-  }
-  .texto-arriba {
-    font-size: 150% !important;
   }
 }
