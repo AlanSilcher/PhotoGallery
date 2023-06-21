@@ -16,9 +16,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        console.log("esto es event", event)
         this.currentRoute = event.url;
-        console.log("esto es route", this.currentRoute)
       }
     });
   }
