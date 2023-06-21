@@ -9,6 +9,19 @@
   padding-bottom: 20px;
 }
 
+@media (min-width: 576px) {
+  .page-container {
+    padding-top: 0; 
+    padding-bottom: 0; 
+  }
+  .carousel-half .carousel-inner {
+    height: 100vh;
+  }
+  .texto-arriba {
+    font-size: 150%;
+  }
+}
+
 .carousel-half {
   width: 50%;
   margin: 2% auto;
@@ -40,19 +53,6 @@
   font-size: 450%; 
 }
 
-@media (min-width: 576px) {
- 
-  .page-container {
-    padding-top: 0; 
-    padding-bottom: 0; 
-  }
-  .carousel-half .carousel-inner {
-    height: 100vh;
-  }
 
-  .texto-arriba {
-    font-size: 150%;
-  }
-}
  
 
