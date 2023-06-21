@@ -44,10 +44,9 @@
   .page-container {
     padding-top: 0 !important; 
     padding-bottom: 0 !important; 
-    background-color: aquamarine !important;
   }
   .carousel-half .carousel-inner {
-    height: 100% !important;
+    height: 250% !important;
   }
   .texto-arriba {
     font-size: 250% !important;
