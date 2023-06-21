@@ -45,8 +45,8 @@
     padding-top: 0 !important; 
     padding-bottom: 0 !important; 
   }
-  .carousel-half .carousel-inner {
-    height: 250% !important;
+  .carousel-half .carousel-item {
+    width: 200% !important;
   }
   .texto-arriba {
     font-size: 250% !important;
