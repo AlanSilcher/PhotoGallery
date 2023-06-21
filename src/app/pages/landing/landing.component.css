@@ -47,11 +47,11 @@
     padding-bottom: 0; 
   }
   .carousel-half .carousel-inner {
-    height: 50vh;
+    height: 100vh;
   }
 
   .texto-arriba {
-    font-size: 250%;
+    font-size: 150%;
   }
 }
  
