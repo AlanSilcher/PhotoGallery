@@ -57,5 +57,6 @@
 
   .texto-arriba {
     font-size: 250% ;
+    margin-bottom: 0px;
   }
 }
