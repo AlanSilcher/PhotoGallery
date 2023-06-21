@@ -1,7 +1,8 @@
 @media (min-width: 576px) {
   .page-container {
     padding-top: 0; 
-    padding-bottom: 0; 
+    padding-bottom: 0;
+    background-color: aqua; 
   }
   .carousel-half .carousel-inner {
     height: 100vh;
